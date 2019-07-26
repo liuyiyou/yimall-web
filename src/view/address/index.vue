@@ -1,19 +1,13 @@
 <template>
   <div>
     <van-nav-bar title="收货地址" left-arrow @click-left="onClickLeft" />
-    <van-address-list
-      v-model="chosenAddressId"
-      :list="list"
-      :disabled-list="disabledList"
-      disabled-text="以下地址超出配送范围"
-      @add="onAdd"
-      @edit="onEdit"
-    />
+    <van-address-list v-model="chosenAddressId" :list="list" @add="onAdd" @edit="onEdit" />
   </div>
 </template>
 
 <script>
 import {
+  NavBar,
   AddressList,
   Cell,
   CellGroup,
@@ -21,16 +15,15 @@ import {
   Icon,
   Row,
   Tabbar,
-  TabbarItem
+  TabbarItem,
+  Toast
 } from "vant";
-// import {fetchList} from '@/api/address'
-
-// const Mock = require("mockjs");
-
+const axios = require("axios");
 const defaultListQuery = {};
 
 export default {
   components: {
+    [NavBar.name]: NavBar,
     [Row.name]: Row,
     [Col.name]: Col,
     [Icon.name]: Icon,
@@ -43,46 +36,47 @@ export default {
   data() {
     return {
       listQuery: Object.assign({}, defaultListQuery),
-      chosenAddressId: "1",
+      chosenAddressId: "0",
       active: 3,
-      list: null,
-      disabledList: null,
+      list: [],
       total: 0,
       listLoading: true
     };
   },
   created() {
-    this.getList();
+    this.onLoad();
   },
   methods: {
-    getList() {
-      console.info("address.method.getlist....");
-      Mock.mock("/get/address_list", "post");
+    onLoad() {
       this.listLoading = false;
-      this.list = [
-        {
-          id: "1",
-          name: "张三",
-          tel: "13000000000",
-          address: "浙江省杭州市西湖区文三路 138 号东方通信大厦 7 楼 501 室"
-        },
-        {
-          id: "2",
-          name: "李四",
-          tel: "1310000000",
-          address: "浙江省杭州市拱墅区莫干山路 50 号"
-        }
-      ];
-      this.disabledList = [
-        {
-          id: "3",
-          name: "王五",
-          tel: "1320000000",
-          address: "浙江省杭州市滨江区江南大道 15 号"
-        }
-      ];
+      let array = new Array();
+      axios
+        .get("address.json")
+        .then(function(response) {
+          if (response.data.success) {
+            let list = response.data.data;
+            list.forEach(element => {
+              console.log(element);
+              var address = {
+                id: element.id,
+                name: element.consignee,
+                tel: element.consignTel,
+                address: element.consigneeAddr
+              };
+              array.push(address);
+            });
+
+            this.chosenAddressId = "2";
+          }
+        })
+        .catch(function(error) {
+          console.log(error);
+        });
+      this.list = array;
+
+      this.chosenAddressId = "2";
+      
     },
-    onLoad() {},
     onClickLeft() {
       this.$router ? this.$router.back() : window.history.back();
     },

@@ -44,6 +44,13 @@ const routes = [
         }
     },
     {
+        name: 'coupon',
+        component: () => import('./view/coupon'),
+        meta: {
+            title: '我的优惠券'
+        }
+    },
+    {
         name: 'search',
         component: () => import('./view/search'),
         meta: {

@@ -1,0 +1,39 @@
+{
+    "code": 200,
+    "msg": "success",
+    "data": {
+        "albums": [
+            "product/21/2101/210101/006/4DAE1595A120F9B2.jpg",
+            "product/21/2101/210101/006/82190B6AEAA25B97.jpg",
+            "product/21/2101/210101/006/25DF337A1035D5D5.jpg"
+        ],
+        "prodId": 210101006,
+        "prodName": "Laneige 兰芝 多效净肤洁颜膏 180ml/支 蓝色 卸妆清洁",
+        "brandId": 181,
+        "brandName": "兰芝",
+        "cataId": 210101,
+        "prodSkus": [
+            {
+                "skuId": 21010100601,
+                "skuName": "Laneige 兰芝 多效净肤洁颜膏 180ml/支 蓝色 卸妆清洁",
+                "prodId": 210101006,
+                "skuAttr": "[]",
+                "store": 2,
+                "saled": 33,
+                "freez": 92,
+                "skuCode": "KA0056",
+                "price": 84,
+                "referPrice": 79,
+                "skuPic": "",
+                "status": 1,
+                "createTime": "2016-09-28 14:45:59",
+                "statusTime": "2016-09-28 14:45:59",
+                "createSuid": 8,
+                "lastUpdate": 1489047159,
+                "skuAttrDesc": ""
+            }
+        ],
+        "skuKeyListValue": []
+    },
+    "success": true
+}

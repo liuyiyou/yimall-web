@@ -2,7 +2,7 @@
   <div>
     <img
       class="user-poster"
-      src="https://img.yzcdn.cn/public_files/2017/10/23/8690bb321356070e0b8c4404d087f8fd.png"
+      
     />
     <van-row class="user-links">
       <van-col span="6">
@@ -40,8 +40,7 @@
 
     <van-cell-group>
       <van-cell icon="points" title="我的积分" is-link />
-      <van-cell icon="gold-coin-o" title="我的优惠券" is-link />
-      <van-cell icon="gift-o" title="我收到的礼物" is-link />
+      <van-cell icon="gold-coin-o" title="我的优惠券" is-link @click="gotoCouponList"/>
     </van-cell-group>
 
     <!--底部栏 start-->
@@ -79,6 +78,9 @@ export default {
     },
     gotoOrders() {
       this.$router.push({ name: "order" });
+    },
+    gotoCouponList(){
+      this.$router.push({name:"coupon"})
     }
   }
 };

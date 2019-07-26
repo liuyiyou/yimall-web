@@ -1,0 +1,70 @@
+{
+    "code": 200,
+    "msg": "success",
+    "data": [
+        {
+            "id": 136,
+            "uid": 1,
+            "consignee": "陈正明",
+            "consignTel": "15920556068",
+            "consignIdno": "522225197908085715",
+            "consignCounty": 26,
+            "consignProvince": 2,
+            "consignCity": 2,
+            "defaultAddr": true,
+            "consignAddr": "{\"addr\":\"员村四横路美林海岸花园云河轩1座1205\",\"city\":\"广州市\",\"county\":\"番禺区\",\"prov\":\"广东省\"}",
+            "createTime": "2016-04-15 13:49:56"
+        },
+        {
+            "id": 20726,
+            "uid": 1,
+            "consignee": "陈正明",
+            "consignTel": "15920556068",
+            "consignIdno": "441424198208085746",
+            "consignCounty": 20,
+            "consignProvince": 2,
+            "consignCity": 2,
+            "defaultAddr": true,
+            "consignAddr": "{\"addr\":\"的是尴尬\",\"city\":\"广州市\",\"county\":\"越秀区\",\"prov\":\"广东省\"}",
+            "createTime": "2017-06-28 11:11:02"
+        },
+        {
+            "id": 20848,
+            "uid": 1,
+            "consignee": "tttt",
+            "consignTel": "13615291094",
+            "consignCounty": 1,
+            "consignProvince": 1,
+            "consignCity": 1,
+            "defaultAddr": true,
+            "consignAddr": "{\"addr\":\" Rwefwwe\",\"city\":\"北京市\",\"county\":\"东城区\",\"prov\":\"北京市\"}",
+            "createTime": "2017-07-07 14:32:58"
+        },
+        {
+            "id": 20849,
+            "uid": 1,
+            "consignee": "yy",
+            "consignTel": "13513215432",
+            "consignCounty": 1,
+            "consignProvince": 1,
+            "consignCity": 1,
+            "defaultAddr": true,
+            "consignAddr": "{\"addr\":\" Ggg\",\"city\":\"北京市\",\"county\":\"东城区\",\"prov\":\"北京市\"}",
+            "createTime": "2017-07-07 14:48:07"
+        },
+        {
+            "id": 20850,
+            "uid": 1,
+            "consignee": "李大伟",
+            "consignTel": "15622195250",
+            "consignIdno": "440881199564322252",
+            "consignCounty": 1932,
+            "consignProvince": 15,
+            "consignCity": 154,
+            "defaultAddr": true,
+            "consignAddr": "{\"city\":\"抚州市\",\"county\":\"临川区\",\"addr\":\" Ffasdfasf\",\"prov\":\"江西省\"}",
+            "createTime": "2017-07-07 14:57:23"
+        }
+    ],
+    "success": true
+}

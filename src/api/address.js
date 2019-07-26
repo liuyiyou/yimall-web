@@ -1,9 +1,17 @@
-import request from '@/utils/request'
+// import request from '@/utils/request'
 
-export function fetchlist (params) {
-  return request({
-    url: '/address/list',
-    method: 'get',
-    params: params
-  })
+
+import { axios } from "axios";
+
+export function fetchlist () {
+  axios.get('/http://localhost:9999/user/delivery/list')
+    .then(function (response) {
+      console.log(response);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
 }
+
+
+

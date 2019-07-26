@@ -1,0 +1,84 @@
+{
+    "code": 200,
+    "msg": "success",
+    "data": {
+        "albums": [
+            "product/21/2101/210101/043/FC3E02217A3DCC49.jpg",
+            "product/21/2101/210101/043/F020A1917B5F72C5.jpg"
+        ],
+        "prodId": 210101043,
+        "prodName": "Laroche Posay 理肤泉 特安舒缓卸妆洁面乳 2种规格可选 温和滋养",
+        "brandId": 324,
+        "brandName": "理肤泉",
+        "cataId": 210101,
+        "prodSkus": [
+            {
+                "skuId": 21010104301,
+                "skuName": "Laroche Posay 理肤泉 特安舒缓卸妆洁面乳 2种规格可选 温和滋养",
+                "prodId": 210101043,
+                "skuAttr": "[{\"attrid-name\":\"823-规格\",\"valid-name\":\"2173-200ml\"}]",
+                "store": 91,
+                "saled": 86,
+                "freez": 13,
+                "skuCode": "3433422406599=DEL_20170919101052",
+                "price": 56,
+                "referPrice": 40,
+                "skuPic": "",
+                "status": 0,
+                "createTime": "2017-03-10 10:01:15",
+                "statusTime": "2017-09-19 10:10:53",
+                "createSuid": 8,
+                "lastUpdate": 1505787052,
+                "skuAttrDesc": "200ml"
+            },
+            {
+                "skuId": 21010104302,
+                "skuName": "Laroche Posay 理肤泉 特安舒缓卸妆洁面乳 2种规格可选 温和滋养",
+                "prodId": 210101043,
+                "skuAttr": "[{\"attrid-name\":\"823-规格\",\"valid-name\":\"2174-400ml\"}]",
+                "store": 28,
+                "saled": 62,
+                "freez": 29,
+                "skuCode": "3337872411830=DEL_20170919101052",
+                "price": 80,
+                "referPrice": 54,
+                "skuPic": "",
+                "status": 0,
+                "createTime": "2017-03-10 10:01:15",
+                "statusTime": "2017-09-19 10:10:53",
+                "createSuid": 8,
+                "lastUpdate": 1505787052,
+                "skuAttrDesc": "400ml"
+            },
+            {
+                "skuId": 21010104303,
+                "skuName": "Laroche Posay 理肤泉 特安舒缓卸妆洁面乳 2种规格可选 温和滋养",
+                "prodId": 210101043,
+                "skuAttr": "[]",
+                "store": 65,
+                "saled": 50,
+                "freez": 5,
+                "skuCode": "3433422406599",
+                "price": 29,
+                "referPrice": 50,
+                "skuPic": "",
+                "status": 1,
+                "createTime": "2017-09-19 10:10:53",
+                "statusTime": "2017-09-19 10:10:53",
+                "createSuid": 1,
+                "lastUpdate": 1505787052,
+                "skuAttrDesc": ""
+            }
+        ],
+        "skuKeyListValue": [
+            {
+                "key": "规格",
+                "values": [
+                    "200ml",
+                    "400ml"
+                ]
+            }
+        ]
+    },
+    "success": true
+}
