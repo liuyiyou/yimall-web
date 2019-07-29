@@ -37,6 +37,13 @@ const routes = [
         }
     },
     {
+        name: 'address_add',
+        component: () => import('./view/address_edit'),
+        meta: {
+            title: '新增收货地址'
+        }
+    },
+    {
         name: 'order',
         component: () => import('./view/order'),
         meta: {

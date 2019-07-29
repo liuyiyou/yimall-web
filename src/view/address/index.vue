@@ -4,42 +4,20 @@
     <van-address-list v-model="chosenAddressId" :list="list" @add="onAdd" @edit="onEdit" />
   </div>
 </template>
-
 <script>
-import {
-  NavBar,
-  AddressList,
-  Cell,
-  CellGroup,
-  Col,
-  Icon,
-  Row,
-  Tabbar,
-  TabbarItem,
-  Toast
-} from "vant";
-const axios = require("axios");
-const defaultListQuery = {};
+import Vue from "vue";
+import { Toast } from "vant";
+Vue.use(Toast);
 
+import { apiAddressList } from "@/request/api";
+const defaultListQuery = {};
 export default {
-  components: {
-    [NavBar.name]: NavBar,
-    [Row.name]: Row,
-    [Col.name]: Col,
-    [Icon.name]: Icon,
-    [Cell.name]: Cell,
-    [CellGroup.name]: CellGroup,
-    [Tabbar.name]: Tabbar,
-    [TabbarItem.name]: TabbarItem,
-    [AddressList.name]: AddressList
-  },
   data() {
     return {
       listQuery: Object.assign({}, defaultListQuery),
-      chosenAddressId: "0",
+      chosenAddressId: "1",
       active: 3,
       list: [],
-      total: 0,
       listLoading: true
     };
   },
@@ -48,44 +26,22 @@ export default {
   },
   methods: {
     onLoad() {
-      this.listLoading = false;
-      let array = new Array();
-      axios
-        .get("address.json")
-        .then(function(response) {
-          if (response.data.success) {
-            let list = response.data.data;
-            list.forEach(element => {
-              console.log(element);
-              var address = {
-                id: element.id,
-                name: element.consignee,
-                tel: element.consignTel,
-                address: element.consigneeAddr
-              };
-              array.push(address);
-            });
-
-            this.chosenAddressId = "2";
-          }
-        })
-        .catch(function(error) {
-          console.log(error);
-        });
-      this.list = array;
-
-      this.chosenAddressId = "2";
-      
+      this.listLoading = true;
+      apiAddressList().then(res => {
+        let data = res.data;
+        this.list = data.list;
+        this.chosenAddressId = data.chosenAddressId;
+      });
     },
     onClickLeft() {
       this.$router ? this.$router.back() : window.history.back();
     },
     onAdd() {
-      this.$router.push({ name: "address_edit" });
+      this.$router.push({ name: "address_add" });
     },
 
     onEdit(item, index) {
-      this.$router.push({ name: "address_edit" });
+      this.$router.push({ name: "address_edit", params: item });
     }
   }
 };

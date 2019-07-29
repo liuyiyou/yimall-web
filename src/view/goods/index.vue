@@ -41,36 +41,10 @@
 </template>
 
 <script>
-import {
-  Sku,
-  Tag,
-  Col,
-  Icon,
-  Cell,
-  CellGroup,
-  Swipe,
-  Toast,
-  NavBar,
-  SwipeItem,
-  GoodsAction,
-  GoodsActionIcon,
-  GoodsActionButton
-} from "vant";
+import Vue from "vue";
+import { Toast } from "vant";
+Vue.use(Toast);
 export default {
-  components: {
-    [Sku.name]: Sku,
-    [NavBar.name]:NavBar,
-    [Tag.name]: Tag,
-    [Col.name]: Col,
-    [Icon.name]: Icon,
-    [Cell.name]: Cell,
-    [CellGroup.name]: CellGroup,
-    [Swipe.name]: Swipe,
-    [SwipeItem.name]: SwipeItem,
-    [GoodsAction.name]: GoodsAction,
-    [GoodsActionIcon.name]: GoodsActionIcon,
-    [GoodsActionButton.name]: GoodsActionButton
-  },
   data() {
     return {
       goods: {
@@ -133,9 +107,7 @@ export default {
     };
   },
   methods: {
-    onLoad(){
-      
-    },
+    onLoad() {},
     formatPrice() {
       return "¥" + (this.goods.price / 100).toFixed(2);
     },
@@ -146,7 +118,7 @@ export default {
       Toast("弹出sku框~");
       return (this.show = true);
     },
-    onBuyClicked(){
+    onBuyClicked() {
       Toast("跳转到订单确认页~");
     },
     onClickLeft() {
